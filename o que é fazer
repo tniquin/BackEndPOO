@@ -1,0 +1,94 @@
+Situação Problema: Desenvolvimento de um Sistema de Gerenciamento de [Tema Escolhido]
+Contexto:
+
+
+Em uma aula introdutória de Programação Orientada a Objetos (POO), os alunos estão aprendendo os
+conceitos básicos de classes, atributos e métodos. Para consolidar o aprendizado, o professor propõe um
+desafio prático: a criação de um sistema de gerenciamento para um tema específico.
+
+
+
+
+Desafio:
+Cada aluno deverá escolher um tema da lista fornecida (36 itens) com base em seu número de chamada. O
+tema escolhido será a base para a criação de uma classe em POO.
+
+
+Meu tema:
+31. Turma
+
+Cada aluno deverá entregar um projeto contendo:
+1. A classe criada em POO, com seus respectivos atributos e métodos.
+
+2. Um programa de exemplo que utilize a classe, demonstrando a criação de objetos, a manipulação de
+seus atributos e a chamada de seus métodos.
+
+3. Um relatório descrevendo o processo de desenvolvimento, as decisões tomadas e os desafios
+encontrados.
+
+
+Critérios de Avaliação:
+• Correção da implementação da classe (atributos, métodos, construtores, etc.).
+• Funcionalidade do programa de exemplo.
+• Clareza e organização do relatório.
+• Utilização dos princípios da POO (encapsulamento, herança, polimorfismo, etc.).
+
+
+Objetivos de Aprendizagem:
+• Compreender e aplicar os conceitos de classes, atributos e métodos em POO.
+• Criar programas que utilizem classes e objetos de forma eficiente.
+• Desenvolver habilidades de resolução de problemas e trabalho em equipe.
+
+
+Observações:
+• O professor poderá fornecer exemplos de classes para auxiliar os alunos.
+• Os alunos utilizarão a linguagem de programação Python.
+• O professor poderá propor desafios adicionais, como a implementação de herança, interfaces ou
+tratamento de exceções.
+
+
+Refinando o Sistema de Gerenciamento com Abstração, Herança e Polimorfismo
+Contexto:
+Após a criação das classes iniciais em POO, os alunos aprofundarão seus conhecimentos explorando os
+pilares da abstração, herança e polimorfismo. O objetivo é aprimorar o sistema de gerenciamento, tornando-o
+mais robusto, flexível e reutilizável.
+Desafio:
+Utilizando as classes já desenvolvidas como base, os alunos deverão aplicar os conceitos de abstração,
+herança e polimorfismo para enriquecer seus projetos.
+Abstração:
+• Identificar os atributos e métodos essenciais das classes, abstraindo detalhes irrelevantes.
+.
+Herança:
+• Criar classes que herdem atributos e métodos de classes pai (superclasses).
+• Adicionar atributos e métodos específicos às classes filhas (subclasses).
+• Demonstrar a relação "é um" entre classes pai e filhas.
+Polimorfismo:
+• Utilizar métodos com o mesmo nome, mas com comportamentos diferentes em classes diferentes.
+• Criar métodos que possam receber objetos de diferentes classes como argumentos.
+• Demonstrar a flexibilidade do polimorfismo na manipulação de objetos.
+Entrega:
+Cada aluno deverá entregar um projeto contendo:
+1. As classes criadas em POO, com a aplicação dos conceitos de abstração, herança e polimorfismo.
+2. Um programa de exemplo que utilize as classes, demonstrando a criação de objetos, a manipulação de
+seus atributos e a chamada de seus métodos, explorando o polimorfismo.
+3. Um relatório descrevendo o processo de desenvolvimento, as decisões tomadas e os desafios
+encontrados na aplicação dos pilares da POO.
+
+Critérios de Avaliação:
+• Correção da implementação das classes, incluindo a aplicação dos conceitos de abstração, herança e
+polimorfismo.
+• Funcionalidade do programa de exemplo, demonstrando o uso do polimorfismo.
+• Clareza e organização do relatório, com a descrição do processo de desenvolvimento e a justificativa
+das decisões tomadas.
+• Utilização dos princípios da POO (encapsulamento, herança, polimorfismo, etc.).
+Objetivos de Aprendizagem:
+• Compreender e aplicar os conceitos de abstração, herança e polimorfismo em POO.
+• Desenvolver habilidades de modelagem de classes utilizando diagramas UML (opcional).
+
+• Criar programas que utilizem classes e objetos de forma eficiente, explorando o polimorfismo.
+• Desenvolver habilidades de resolução de problemas e trabalho em equipe.
+Observações:
+• O professor poderá fornecer exemplos de classes e diagramas UML para auxiliar os alunos.
+• Os alunos utilizarão a linguagem de programação Python.
+• O professor poderá propor desafios adicionais, como a implementação de interfaces ou tratamento de
+exceções.

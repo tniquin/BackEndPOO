@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim da Turma {{ Turma.nome_turma }}</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(to right, #282828, #090023);
+        color: #ffffff;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #1a1a1a;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+        color: #ffffff;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #555;
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        margin: 20px 0;
+        padding: 20px;
+        background: #f3f3f3; /* Cinza claro */
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card p {
+        margin: 5px 0;
+        font-size: 1rem;
+    }
+
+    .card h3 {
+        margin-top: 15px;
+        color: #0a0025;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    /* Tabela de notas */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+        background: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    th {
+        background: #000e44;
+        color: #ff1f1f;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    td {
+        background: #ffeeb6;
+        color: #000000;
+    }
+
+    tr:nth-child(odd) td {
+        background: #ffffff;
+    }
+
+    /* Links ou botões, caso adicionados */
+    a, button {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        padding: 10px 15px;
+        background: #00071f;
+        color: #fff;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    a:hover, button:hover {
+        background: #ffffff;
+    }
+
+    /* Responsividade - Adapta para telas menores */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        table th, table td {
+            font-size: 0.9rem;
+        }
+
+        .card {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Boletim da Turma: {{ Turma.nome_turma }}</h1>
+    <p><strong>Ano:</strong> {{ Turma.ano }}</p>
+
+    <h2>Professores</h2>
+    {% for professor in Turma.professores %}
+        <div class="card">
+            <p><strong>Nome:</strong> {{ professor.nome }}</p>
+            <p><strong>Especialidade:</strong> {{ professor.especialidade }}</p>
+            <p><strong>Email:</strong> {{ professor.email }}</p>
+            <p><strong>Salário:</strong> R$ {{ professor.salario }}</p>
+        </div>
+    {% endfor %}
+
+    <h2>Alunos</h2>
+    {% for aluno in Turma.alunos %}
+        <div class="card">
+            <p><strong>Nome:</strong> {{ aluno.nome }}</p>
+            <p><strong>Email:</strong> {{ aluno.email }}</p>
+            <p><strong>Turma:</strong> {{ aluno.turma }}</p>
+            <h3>Boletim</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Matéria</th>
+                        <th>Média</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for materia, media in aluno.medias_materias.items() %}
+                        <tr>
+                            <td>{{ materia }}</td>
+                            <td>{{ media|round(2) }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <p><strong>Média Geral:</strong> {{ aluno.media_geral|round(2) }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
